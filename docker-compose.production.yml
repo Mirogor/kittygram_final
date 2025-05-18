@@ -15,8 +15,8 @@ services:
     image: mirogor/kittygram_backend
     env_file: .env
     volumes:
-      - static:/app/staticfiles
-      - media:/app/media
+      - static:/static 
+      - media:/media
     depends_on:
       - db
   frontend:
@@ -32,7 +32,7 @@ services:
       - 9000:80
     volumes:
       - static:/static
-      - media:/var/html/media
+      - media:/media
     depends_on:
       - backend
       - frontend
