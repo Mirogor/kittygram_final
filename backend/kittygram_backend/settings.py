@@ -12,7 +12,6 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'replace-me-with-a-real-secret')
 
 DEBUG = os.getenv('DEBUG', 'False').lower() in ('true', '1', 't')
 
-# ALLOWED_HOSTS = ['localhost','kittygrammiron.zapto.org', '158.160.17.48']
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
@@ -104,7 +103,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles' 
  
 MEDIA_URL = '/media/' 
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
