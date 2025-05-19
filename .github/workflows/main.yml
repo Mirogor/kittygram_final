@@ -156,6 +156,7 @@ jobs:
           sudo docker compose -f docker-compose.production.yml up -d
           sudo docker compose -f docker-compose.production.yml exec backend python manage.py migrate
           sudo docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
+          sleep 10
           sudo docker compose -f docker-compose.production.yml exec backend cp -r /static/static/* /static/ && rm -rf /static/static
 
   send_message:
