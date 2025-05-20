@@ -25,7 +25,7 @@ services:
     command: cp -r /app/build/. /static/ 
     volumes: 
       - static:/static
-    deoends_on:
+    depends_on:
       - backend
   gateway: 
     build: ./nginx/ 
@@ -34,7 +34,7 @@ services:
       - 9000:80 
     volumes: 
       - static:/static
-      - media:/media 
+      - media:/app/media/
     depends_on: 
       - backend 
       - frontend 
