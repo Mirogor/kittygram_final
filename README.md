@@ -1,3 +1,5 @@
+[![Main Kittygram workflow](https://github.com/Mirogor/kittygram_final/actions/workflows/main.yml/badge.svg)](https://github.com/Mirogorkittygram_final/actions/workflows/main.yml)
+
 # Kittygram — сервис для любителей котиков
 
 **Kittygram** — это веб-приложение, где пользователи могут публиковать карточки котиков, указывать их характеристики и делиться ими с другими. Вы можете добавлять, редактировать и удалять котиков, фильтровать по породам и многое другое. Проект развёрнут в Docker-контейнерах и использует CI/CD для автоматического деплоя.
